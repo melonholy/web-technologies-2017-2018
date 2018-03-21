@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="back">
+
+    <div class="upperline"></div>
+    <form method="post" action="#">
+        <article class="highlight">
+            <section class="line"></section>
+            <span class="razmer">Password request form</span>
+       <section><h4>Please fill your name<span class="star">*</span></h4></section>
+       <section  >
+           <input name ="username" type="text">
+       </section>
+       <section>
+           <h4>What color you like?<span class="star">*</span></h4>
+           <p> <input type="radio" name="col" value="r">Red</p>
+           <p><input type="radio" name="col" value="b">Blue</p>
+           <p> <input type="radio" name="col" value="y">Yellow</p>
+           <p><input type="radio" name="col" value="g">Green</p>
+           <p> <input type="radio" name="col" value="p">Purple</p>
+           <p><input type="radio" name="col" value="bl">Black</p>
+           <p><input type="radio" name="col" value="other">Other:
+               <input name="other" type="text">
+           </p>
+       </section>
+        <section>
+            <h4>What town you like more?<span class="star">*</span></h4>
+            <select class="select_mate">
+                <option>Brest</option>
+                <option>Minsk</option>
+                <option>Gomel</option>
+                <option>Grodno</option>
+                <option>Mogilev</option>
+                <option>Vitebsk</option>
+            </select>
+        </section>
+       <section>
+           <h4>Please describe (at least 50 symbols on symbols) your favorite programming language<span class="star">*</span></h4>
+           <input class="discribe" data-ini name="desc" type="text">
+       </section>
+       <section>
+           <h4>What years of education did you really like?<span class="star">*</span></h4>
+           <p><input  name="years" type="checkbox" value="1st">First</p>
+           <p><input  name="years" type="checkbox" value="2nd">Second</p>
+           <p><input  name="years" type="checkbox" value="3rd">Third</p>
+           <p><input  name="years" type="checkbox" value="4th">Forth</p>
+       </section>
+       <section>
+           <h4>Please send any image<span class="star">*</span></h4>
+           <input type="file">
+       </section>
+       <section>
+           <h4>Set your locale data<span class="star">*</span></h4>
+           <input name="data" class="data" type="date">
+       </section>
+       <div>
+           <input name="submit" class="submit" type="submit">
+       </div>
+   </article>
+    </form>
+</body>
+</html>
