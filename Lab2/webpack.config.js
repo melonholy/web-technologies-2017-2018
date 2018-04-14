@@ -1,7 +1,11 @@
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
-  entry: "./index.js",
-  output: {
-    filename: "bundle.js"
-  }, 
-  watch: true
-}
+    entry: "./index.js",
+    plugins: [
+        new UglifyJsPlugin()
+    ],
+    output: {
+        filename: "bundle.js"
+    },
+    watch: true
+};
