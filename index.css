@@ -1,0 +1,163 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.content{
+  margin-top: 100px;
+  background-color: black;
+  height: 400px;
+  width: 700px;
+}
+.tabs-st{
+  color: darkgray;
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 30px;
+}
+.tabs{
+ display: flex;
+}
+
+.img-style{
+  padding-top: 10px;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.name-style{
+  color: black;
+  font-size: 30px;
+  padding-top: 10px;
+}
+
+.login-style{
+  color: darkgray;
+  font-size: 24px;
+  padding-top: 5px;
+}
+
+.bio-style{
+  color: darkgray;
+  font-size: 18px;
+  padding-top: 15px;
+}
+
+.company-style{
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  padding-top: 5px;
+}
+
+.location-style{
+  color: black;
+  font-size: 18px;
+  padding-top: 5px;
+}
+
+.blog-style{
+  text-decoration: none;
+  color: blue;
+  font-size: 18px;
+  padding-top: 10px;
+}
+
+.error-style{
+  color: black;
+  font-size: 40px;
+  padding-top: 10px;
+  font-weight: 700;
+}
+
+.icons{
+  float: left;
+  padding-right: 7px;
+  padding-top: 5px;
+}
+
+.editableTab{
+    display: flex;
+    flex-direction: column;
+}
+
+.ulTabButtons{
+    border-bottom: 2px solid #8b888a;
+    display: flex;
+}
+
+.tabButton{
+    background-color: #fff;
+    border: none;
+    padding: 20px 30px;
+}
+
+.tabButton:focus{
+    outline: none;
+}
+
+.radioLabel{
+    cursor: pointer;
+    padding: 20px 30px;
+}
+
+.radioTabButton{
+    visibility: hidden;
+}
+
+.radioTabButton:checked + .radioLabel{
+    border-bottom: 2px solid #f00;
+}
+
+.editButton{
+    background-color: #fff;
+    border: 3px solid #8b888a;
+    height: 60px;
+    outline: none;
+    margin: 15px 0 15px auto;
+    width: 30%;
+}
+.lil{
+  display: flex;
+}
+
+#root{
+  display: block;
+  width: 300px;
+  height: auto;
+  padding: 10px;
+}
