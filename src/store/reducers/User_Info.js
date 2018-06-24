@@ -1,4 +1,4 @@
-const State = {
+const Info = {
         avatar: '',
         name: '',
         login: '',
@@ -8,10 +8,10 @@ const State = {
         blog: ''
 };
 
-export default function User_Info(state = State,action) {
+export default function User_Info(state = Info,action) {
     if(action.type ==='GET_USER'){
-        return Object.assign({},state,action.data);
+        return Object.assign({}, state, action.data);
     }
     else
-        return state
+        return state;
 }

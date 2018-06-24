@@ -20,12 +20,10 @@ class CommonInfo extends Component {
     }
 
     render() {
+        this.getUser();
         if (this.props.store.User_Info) {
             return (
                 <Fragment>
-                    <div>
-                        <button onClick={this.getUser}>Find</button>
-                    </div>
                     <img className="img-style" src={this.props.store.User_Info.avatar}/>
                     <Text className="name-style" value={this.props.store.User_Info.name}/>
                     <Text className="login-style" value={this.props.store.User_Info.login}/>
