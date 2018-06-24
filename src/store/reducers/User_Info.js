@@ -13,5 +13,5 @@ export default function User_Info(state = State,action) {
         return Object.assign({},state,action.data);
     }
     else
-        return state;
+        return state
 }
