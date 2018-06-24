@@ -116,7 +116,7 @@ table {
 }
 
 .ulTabButtons{
-    border-bottom: 2px solid #8b888a;
+    border-bottom: 2px solid #008000;
     display: flex;
 }
 
@@ -140,12 +140,12 @@ table {
 }
 
 .radioTabButton:checked + .radioLabel{
-    border-bottom: 2px solid #f00;
+    border-bottom: 2px solid #000;
 }
 
 .editButton{
     background-color: #fff;
-    border: 3px solid #8b888a;
+    border: 3px solid #008000;
     height: 60px;
     outline: none;
     margin: 15px 0 15px auto;
