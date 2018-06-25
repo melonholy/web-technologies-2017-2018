@@ -1,10 +1,11 @@
-import {fetching} from "../../fetching";
+import {fetching, getFollowsandRepos} from "../../fetching";
 
 export const getInfo = () => (dispatch) =>{
-    fetching()
+    const log  = document.getElementById('search').value;
+    fetching(log)
         .then(({avatar_url, name, login, bio, company, location, blog})=>{
         dispatch({
-            type: 'GET_USER',
+            type: 'GET_INFO',
             data:{
                 avatar : avatar_url,
                 name : name,
@@ -19,4 +20,12 @@ export const getInfo = () => (dispatch) =>{
     })
 
 };
-
+export const sendFollow = (state) => (dispatch) => {
+    getFollowsandRepos()
+        .then((response) => {
+            dispatch({
+                type: 'GET_INFO',
+                data: response,
+            })
+        })
+};

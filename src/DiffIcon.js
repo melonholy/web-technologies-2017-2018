@@ -1,6 +1,14 @@
 import React, { Fragment } from 'react';
 import { Icon } from "./components/Icons";
+function Image(props){
+    if(!props.src){
+                return null
+                }
+    return(
+                <img alt="Your avatar" src={props.src} className={props.className}/>
+        )
 
+}
 function Text(props) {
     if(!props.value){
         return null;
@@ -13,14 +21,6 @@ function Text(props) {
     )
 }
 
-function Img(props) {
-    if(!props.src){
-        return null
-    }
-    return(
-        <img alt="Your avatar" src={props.src} className={props.className}/>
-        )
-}
 
 function Link(props) {
     if (!props.value) {
@@ -33,4 +33,18 @@ function Link(props) {
         </Fragment>
     )
 }
-export {Text,Img,Link}
+function List(props) {
+    if (props.from.length === 0) {
+        return(
+            <p>Empty</p>
+        )
+    }
+    else
+        return (
+            <ul className={props.className}>
+                {props.from.map((item, i) => <li key={i}>{item[props.property]}</li>)}
+            </ul>
+        )
+
+}
+export {Text,Link,List,Image}
