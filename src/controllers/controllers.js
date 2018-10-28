@@ -1,39 +1,24 @@
-const fs=require('fs')
-const films =JSON.parse(fs.readFileSync('data.json','utf8'))
-
+const getServices = require('../services/services')
 
 function getControllers() {
 
-    const showFilms=(req, res) => {
-        let title = req.query.q;
-        res.send(films.filter(item => item.title.toString().toLowerCase().includes(title)).map(item => item.title))
+    const searchFilms=(req, res) => {
+        res.send(getServices.searchService(req.query.title))
     };
 
     const Page =(req, res) => {
-        let offset = req.query.off;
-        let limit = req.query.lim;
-        res.send(films.slice(Number(offset),Number(offset) + Number(limit)).map(item => item.title))
+        res.send(getServices.pageService(req.query.off,req.query.lim))
     };
 
     const Sort = (req,res)=>{
-        let FieldOfFilm = req.query.f;
-        let direction = req.query.d;
-        res.send(films.sort((a,b)=>{
-            if(direction === 'l')
-                return a[FieldOfFilm].localeCompare(b[FieldOfFilm]);
-            else if (direction === 'r')
-                return b[FieldOfFilm].localeCompare(a[FieldOfFilm])
-        }).map(item=>item.title))
+        res.send(getServices.sortService(req.query.f,req.query.d))
     };
 
     const getId = (req,res)=>{
-        let ID=req.query.i;
-        res.send(films.filter(item=>{
-            return item.id===Number(ID)
-        }).map(item=>item.title))
+        res.send(getServices.idService(req.query.i))
     };
 
-    return {showFilms,Page,Sort,getId}
+    return {searchFilms,Page,Sort,getId}
 }
 
 module.exports = getControllers();
