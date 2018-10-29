@@ -1,6 +1,6 @@
 const  express = require('express');
 const  app = express();
-const getRouter = require('./src/rotes/rotes')()
+const getRouter = require('./src/routes/routes')()
 require('./src/config/config')()
 
 app.use(getRouter)
