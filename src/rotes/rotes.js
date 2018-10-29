@@ -12,6 +12,10 @@ function getRoter() {
 
     router.get('/id',getControllers.getId)
 
+    router.get('/',(req,res)=>{
+        return res.send("Hello,API here")
+    })
+
     return router
 }
 
