@@ -13,6 +13,10 @@ function getServices() {
       .map(item => item.title);
   };
 
+  const showService = () => {
+    return films.map(item => item.title);
+  };
+
   const pageService = (offset, limit) => {
     return films
       .slice(Number(offset), Number(offset) + Number(limit))
@@ -38,7 +42,7 @@ function getServices() {
       .map(item => item.title);
   };
 
-  return { searchService, pageService, sortService, idService };
+  return { searchService, pageService, sortService, idService, showService };
 }
 
 module.exports = getServices();

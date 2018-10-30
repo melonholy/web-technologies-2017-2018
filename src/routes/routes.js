@@ -12,6 +12,8 @@ function getRoter() {
 
   router.get("/id", getControllers.getId);
 
+  router.get("/show", getControllers.getFilms);
+
   router.get("/", (req, res) => {
     return res.send("Hello,API here");
   });
