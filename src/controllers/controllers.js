@@ -26,10 +26,11 @@ function getControllers() {
     direction: Joi.valid("r", "l").required()
   });
 
-  const id = Joi.number()
-    .integer()
-    .min(0)
-    .required();
+  const id = Joi.object().keys({
+    id: Joi.number()
+      .integer()
+      .required()
+  });
 
   const searchFilms = (req, res) => {
     Joi.validate(req.query, searchSchema, (err, value) => {
