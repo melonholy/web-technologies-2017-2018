@@ -1,0 +1,1 @@
+Swagger: https://app.swaggerhub.com/apis/melonholy/lab7-backend/0.1
