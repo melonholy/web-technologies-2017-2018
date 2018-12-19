@@ -30,6 +30,9 @@ const id = Joi.object().keys({
     .integer()
     .required()
 });
+const popularity = Joi.object().keys({
+  popularity: Joi.number().required()
+});
 
 const searchFilms = (req, res) => {
   Joi.validate(req.query, searchSchema, (err, value) => {
@@ -86,5 +89,17 @@ const getId = (req, res) => {
 const getFilms = (req, res) => {
   getServices.showService(res);
 };
+const getPopularity = (req, res) => {
+  Joi.validate(req.query, err => {
+    if (err) {
+      res.status(400).json({
+        status: "Bad request",
+        message: "Invalid parameters"
+      });
+    } else {
+      getServices.popularityService(res);
+    }
+  });
+};
 
-module.exports = { searchFilms, Page, getFilms, getId, Sort };
+module.exports = { searchFilms, Page, getFilms, getId, Sort, getPopularity };

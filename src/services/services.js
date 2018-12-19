@@ -69,11 +69,11 @@ function getServices() {
   const sortService = (FieldOfFilm, direction) => {
     if (direction === "l")
       Films.find({})
-        .sort([[title, -1]])
+        .sort([[FieldOfFilm, -1]])
         .then(films => res.json(films));
     else if (direction === "r")
       Films.find({})
-        .sort([[title, 1]])
+        .sort([[FieldOfFilm, 1]])
         .then(films => res.json(films));
   };
 
@@ -82,8 +82,20 @@ function getServices() {
       res.json(film);
     });
   };
+  const popularityService = res => {
+    Films.find({})
+      .sort([[popularity, 1]])
+      .then(films => res.json(films));
+  };
 
-  return { searchService, pageService, sortService, idService, showService };
+  return {
+    searchService,
+    pageService,
+    sortService,
+    idService,
+    showService,
+    popularityService
+  };
 }
 
 module.exports = getServices();

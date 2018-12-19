@@ -6,7 +6,8 @@ const {
   Page,
   Sort,
   getId,
-  getFilms
+  getFilms,
+  getPopularity
 } = require("../controllers/controllers");
 
 function getRoter() {
@@ -19,6 +20,8 @@ function getRoter() {
   router.get("/id", getId);
 
   router.get("/show", getFilms);
+
+  router.get("/popularity", getPopularity);
 
   router.get("/", (req, res) => {
     return res.send("Hello,API here");
